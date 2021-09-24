@@ -178,6 +178,18 @@ section{
 
 .about .row .image img{
     width: 100%;
+    animation: aboutImage 4s linear infinite;
+}
+
+@keyframes aboutImage {
+    0%, 100%{
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    50%{
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
 }
 
 .about .row .content{
@@ -190,6 +202,95 @@ section{
     line-height: 1.8;
 }
 
+.about .row .content p{
+    color:var(--main-color);
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.about .row .content .icons-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 3rem;
+
+}
+
+.about .row .content .icons-container .icons{
+    flex: 1 1 15rem;
+    padding: 1.5rem;
+    text-align: center;
+    border:var(--border);
+    border-radius: var(--border-radius);
+}
+
+.about .row .content .icons-container .icons img{
+    height: 5rem;
+
+}
+
+.about .row .content .icons-container .icons h3{
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    color: var(--main-color);
+}
+
+.menu{
+    background: url(../image/menu-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.menu .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu .box-container .box{
+    flex: 1 1 42rem;
+    padding: 2rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap:1.5rem;
+    margin-left: 6rem;
+}
+
+.menu .box-container .box:hover{
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+.menu .box-container .box img{
+    height: 8rem;
+    margin-left: -6rem;
+}
+
+.menu .box-container .box .content h3{
+    font-size: 2.2rem;
+    color: var(--main-color);
+    line-height: 1.8;
+
+}
+
+.menu .box-container .box .content p{
+    font-size: 1.6rem;
+    color: var(--main-color);
+    line-height: 1.8;
+    padding: 1rem 0;
+
+}
+
+.menu .box-container .box .content span{
+    font-size: 2rem;
+    color: var(--main-color);
+    line-height: 1.8;
+
+}
 
 /* media queri */
 
@@ -206,6 +307,13 @@ section{
 }
 
 @media(max-width: 768px){
+    .heading{
+        font-size: 6rem;
+    }
+
+    .heading span{
+        font-size: 2.3rem;
+    }
     #menu-btn{
         display: initial;
     }
@@ -238,6 +346,18 @@ section{
     }
     .home .row .content h3{
         font-size: 4rem;
+    }
+
+    .menu .box-container .box{
+        margin-left: 0;
+        margin-top: 6rem;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .menu .box-container .box img{
+        margin-left: 0;
+        margin-top: -6rem;
     }
 }
 
